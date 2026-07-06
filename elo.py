@@ -56,7 +56,8 @@ def read_results(
         if verbose:
             print(filename)
         df = pd.read_csv(filename)
-        df["filename"] = filename  # keep the source file as a column
+        df["filename"] = filename.replace('\\', '/')  # keep the source file as a column,
+                                                      # and normalize windows paths
         frames.append(df)
 
     combined = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
