@@ -1,3 +1,12 @@
-untracked files:
+# Notebooks
+.ipynb_checkpoints/
 publish_to_medium.ipynb
-.ipynb_checkpoints
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS
+.DS_Store

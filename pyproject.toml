@@ -1,0 +1,28 @@
+[project]
+name = "pl-elo-score"
+version = "0.1.0"
+description = "Understanding the ELO rating system with English Premier League results."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+    "jupyterlab>=4.0",
+    "ipykernel>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+# This is an analysis project, not a distributable package: manage the
+# environment but don't try to build/install the repo itself.
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
